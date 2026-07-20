@@ -26,6 +26,6 @@ A modern, responsive, and interactive digital billing terminal designed for Gree
 5. **Payment**: Scan the displayed QR code to complete the transaction[cite: 1].
 
 ## 🔗 Live Application
-[<img src="https://github.com/Madhusudhan-data/Restaurant_bill/blob/master/preview_image.png">](https://madhusudhan-data.github.io/Restaurant_bill/)
+[<img src="https://github.com/Madhusudhan-data/Restaurant_bill/blob/master/interface.png">](https://madhusudhan-data.github.io/Restaurant_bill/)
 ---
 *Built with ❤️ for efficient restaurant billing management.*
