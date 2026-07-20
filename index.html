@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Bucket Mandi</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen font-sans flex flex-col">
+
+    <!-- Header Navigation -->
+    <header class="border-b border-gray-800 bg-gray-900/80 p-4 sticky top-0 backdrop-blur-md z-10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-black tracking-tight text-amber-500">Green Bucket Mandi</h1>
+            <p id="bill-date" class="text-xs font-mono text-gray-400">Date: --/--/----</p>
+        </div>
+    </header>
+
+    <!-- Main Workspace Split Screen -->
+    <main class="max-w-7xl w-full mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6 flex-1">
+        
+        <!-- Left Column: Menu Items Section -->
+        <section class="lg:col-span-7 xl:col-span-8 space-y-4">
+            <h2 class="text-lg font-bold text-gray-300 border-b border-gray-800 pb-2">Menu Categories</h2>
+            <!-- JavaScript will inject menu food objects here -->
+            <div id="menu-grid" class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            </div>
+        </section>
+
+        <!-- Right Column: Digital Order Bill Receipt -->
+        <section class="lg:col-span-5 xl:col-span-4 flex flex-col bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden shadow-2xl h-[calc(100vh-140px)] sticky top-24">
+            <div class="p-4 border-b border-gray-800 bg-gray-950/40">
+                <h3 class="font-bold text-gray-200">Billing Receipt</h3>
+                <p class="text-xs text-gray-500">Billing Counter: Madhusudhan</p>
+            </div>
+
+            <!-- Scrollable Receipt Items -->
+            <div id="receipt-items" class="p-4 overflow-y-auto flex-1 space-y-3 font-mono text-sm">
+                <p id="empty-state" class="text-gray-500 text-center py-12 text-xs">No items added to current bill yet.</p>
+            </div>
+
+            <!-- Financial Footer -->
+            <div class="p-4 border-t border-gray-800 bg-gray-950/40 space-y-2 text-sm font-mono">
+                <div class="flex justify-between text-gray-400">
+                    <span>Subtotal:</span>
+                    <span id="bill-subtotal">₹0.00</span>
+                </div>
+                <div class="flex justify-between text-gray-400">
+                    <span>CGST + SGST (18%):</span>
+                    <span id="bill-tax">₹0.00</span>
+                </div>
+                <hr class="border-gray-800 my-1">
+                <div class="flex justify-between text-base font-bold text-amber-400">
+                    <span>Total Amount:</span>
+                    <span id="bill-total">₹0.00</span>
+                </div>
+                
+                <button id="btn-checkout" class="w-full mt-2 bg-amber-500 hover:bg-amber-600 text-gray-950 font-bold py-3 px-4 rounded-xl transition-all shadow-lg active:scale-98 cursor-pointer text-center">
+                    Pay Now
+                </button>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Connect your app.js file here -->
+    <script src="app.js"></script>
+</body>
+</html>
